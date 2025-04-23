@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoSec Chatbot</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row min-vh-100">
+            <div class="col-md-8 col-lg-6 mx-auto d-flex flex-column">
+                <!-- Header -->
+                <header class="py-3 text-center border-bottom">
+                    <h1 class="mb-0">
+                        <i class="fas fa-shield-alt text-primary me-2"></i>
+                        InfoSec Assistant
+                    </h1>
+                    <p class="text-muted small mb-0">Your information security chatbot</p>
+                </header>
+
+                <!-- Chat Container -->
+                <div class="chat-container flex-grow-1 d-flex flex-column">
+                    <!-- Messages -->
+                    <div id="chat-messages" class="chat-messages flex-grow-1 p-3 overflow-auto">
+                        <!-- Bot welcome message -->
+                        <div class="message bot-message mb-3">
+                            <div class="message-content bg-light p-3 rounded">
+                                <p>Hello! I'm your Information Security Assistant. How can I help you today?</p>
+                                <p>Here are some topics I can help with:</p>
+                                <ul>
+                                    <li>Password security</li>
+                                    <li>Phishing attacks</li>
+                                    <li>Malware protection</li>
+                                    <li>Data encryption</li>
+                                    <li>Network security</li>
+                                </ul>
+                            </div>
+                            <div class="message-time text-muted small mt-1">Just now</div>
+                        </div>
+                    </div>
+
+                    <!-- Input Area -->
+                    <div class="chat-input p-3 border-top">
+                        <form id="chat-form" class="d-flex">
+                            <input type="text" id="user-input" class="form-control me-2" placeholder="Ask about information security..." autocomplete="off">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                        <div class="suggestions mt-2 d-flex flex-wrap">
+                            <button class="btn btn-sm btn-outline-secondary me-2 mb-2 suggestion-btn">Password best practices</button>
+                            <button class="btn btn-sm btn-outline-secondary me-2 mb-2 suggestion-btn">How to spot phishing?</button>
+                            <button class="btn btn-sm btn-outline-secondary me-2 mb-2 suggestion-btn">What is 2FA?</button>
+                            <button class="btn btn-sm btn-outline-secondary me-2 mb-2 suggestion-btn">VPN benefits</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
